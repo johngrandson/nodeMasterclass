@@ -118,5 +118,5 @@ handlers.notFound = (data, callback) => {
 
 // Define a request router
 let router = {
-  'ping': handlers.ping
+  ping: handlers.ping
 };
