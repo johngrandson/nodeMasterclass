@@ -111,6 +111,11 @@ handlers.ping = (data, callback) => {
   callback(200);
 };
 
+// Hello handler
+handlers.hello = (data, callback) => {
+  callback(200, { 'res': 'Hello World' });
+}
+
 // Not found handler
 handlers.notFound = (data, callback) => {
   callback(404);
@@ -118,5 +123,6 @@ handlers.notFound = (data, callback) => {
 
 // Define a request router
 let router = {
-  ping: handlers.ping
+  ping: handlers.ping,
+  hello: handlers.hello
 };
