@@ -5,11 +5,9 @@
 
 // Dependencies
 const http = require('http');
-const https = require('http2');
 const url = require('url');
 const { StringDecoder } = require('string_decoder');
 const config = require('./config');
-const fs = require('fs');
 const handlers = require('./handlers');
 const router = require('./router');
 
