@@ -12,17 +12,7 @@ const handlers = require('./handlers');
 const router = require('./router');
 
 // Instantiate the HTTP server
-const httpServer = http.createServer((req, res) => {
-  unifiedServer(req, res);
-});
-
-// Start the server, and have it listen on port 3000
-httpServer.listen(config.httpPort, () => {
-  console.log(`Server is listening on port ${config.httpPort}`);
-});
-
-// All the server logic for both the http and https server
-const unifiedServer = (req, res) => {
+const server = http.createServer((req, res) => {
   // Get the URL and parse it
   const parsedUrl = url.parse(req.url, true);
 
@@ -81,6 +71,10 @@ const unifiedServer = (req, res) => {
       console.log('Returning this response: ', statusCode, payloadString);
 
     });
-
   });
-};
+});
+
+// Start the server, and have it listen on port 3000
+server.listen(config.httpPort, () => {
+  console.log(`Server is listening on port ${config.httpPort}`);
+});
