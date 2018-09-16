@@ -17,7 +17,7 @@ node index.js
 
 ### Making Requests
 
-You can use the postman, making a GET request in the /hello endpoint.
+You can use the postman, making a GET or POST request in the /hello endpoint.
 
 ```
 http://localhost:3000/hello
